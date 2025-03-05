@@ -1,0 +1,57 @@
+// Reusable SCSS mixins for maintaining DRY principles.
+
+// Flexbox Centering
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Button Styles
+@mixin button($bg, $color: white) {
+  background-color: $bg;
+  color: $color;
+  padding: $spacing-sm $spacing-md;
+  border-radius: $border-radius;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+// Background Image
+@mixin background-image($image) {
+  // Flexbox Centering
+  @mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // Button Styles
+  @mixin button($bg, $color: white) {
+    background-color: $bg;
+    color: $color;
+    padding: $spacing-sm $spacing-md;
+    border-radius: $border-radius;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  // Background Image
+  @mixin background-image($image) {
+    background: $image no-repeat center;
+    background-size: cover;
+  }
+
+  background: $image no-repeat center;
+  background-size: cover;
+}

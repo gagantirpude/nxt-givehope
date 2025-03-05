@@ -1,0 +1,19 @@
+// Enhanced hero section.
+.hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $light-text;
+  text-align: center;
+
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .watch-video {
+    @include button($accent-color, $light-text);
+    border-radius: 5px;
+  }
+}

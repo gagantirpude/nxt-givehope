@@ -1,11 +1,16 @@
-import React from "react";
+import Meta from "./Components/Meta";
 
-const Gallery = () => {
+export default function Gallery() {
   return (
-    <div>
-      <h1>Gallery</h1>
-    </div>
+    <>
+      <Meta
+        title="Gallery"
+        description="Welcome to GIVEHOPE, a platform to make a difference."
+      />
+      <main>
+        <h1>Welcome to Gallery</h1>
+        <p>Making a difference, one donation at a time.</p>
+      </main>
+    </>
   );
-};
-
-export default Gallery;
+}

@@ -1,8 +1,9 @@
 @import "variables";
 @import "mixins"; // ✅ Make sure this is above any file using mixins
 @import "reset";
-@import "global";
 @import "header";
+@import "home.scss";
+
 @import "hero";
 @import "whoWeAre";
 // @import "infosection.scss";

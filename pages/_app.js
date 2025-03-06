@@ -1,13 +1,11 @@
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
+import Header from "./components/Header";
 import "../styles/main.scss";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Header title={pageProps.title || "GIVEHOPE"} />
+      <Header />
       <Component {...pageProps} />
-      <Footer />
     </>
   );
 }

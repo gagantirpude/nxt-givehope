@@ -1,11 +1,16 @@
-// Defines color themes, typography, and layout variables for easy modification. 
+// Defines color themes, typography, and layout variables for easy modification.
 
 // Color Palette
 $primary-color: red;
 $secondary-color: pink;
 $tertiary-color: black;
 $quaternary-color: gray;
-$white : #fff;
+
+// Define colors
+$primary-color: #222;
+$hover-color: #ffcc00;
+$text-color: white;
+$mobile-bg: #333;
 
 // UI Colors
 $bg-image: url("https://via.placeholder.com/1920x1080"); // Replace with actual image URL
@@ -22,5 +27,5 @@ $spacing-lg: 40px;
 $border-radius: 8px;
 
 // Typography
-$font-primary: 'Poppins', sans-serif;
-$font-secondary: 'Arial', sans-serif;
+$font-primary: "Poppins", sans-serif;
+$font-secondary: "Arial", sans-serif;

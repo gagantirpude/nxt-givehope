@@ -1,0 +1,111 @@
+// Define colors
+$primary-color: #222;
+// $hover-color: #ffcc00;
+$mobile-bg: #333;
+$text-color: #fff;
+
+// Mixin for flexbox
+@mixin flex($justify: space-between, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+nav {
+  background: $quaternary-color;
+  color: $light-text;
+  padding: 0.5rem 1rem;
+  position: relative;
+  left: 0;
+  right: 0;
+  z-index: 13;
+  top: 10px;
+  height: 85px;
+  align-content: center;
+
+  .container {
+    @include flex;
+    max-width: 1140px;
+    margin: auto;
+
+    .navbar-brand {
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 30px;
+      font-family: $font-secondary;
+    }
+  }
+
+  a {
+    font-size: 20px;
+    font-weight: bold;
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $hover-color;
+    }
+  }
+
+  button {
+    display: none;
+    background: none;
+    border: none;
+    color: $text-color;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  div {
+    ul {
+      list-style: none;
+      @include flex($justify: flex-end);
+      gap: 20px;
+
+      li {
+        a {
+          font-size: 16px;
+          padding: 10px 15px;
+          text-decoration: none;
+
+          &:hover {
+            color: $hover-color;
+          }
+        }
+
+        &.active a {
+          font-weight: bold;
+          border-bottom: 2px solid $hover-color;
+        }
+      }
+    }
+  }
+}
+
+// Mobile styles
+@media (max-width: 768px) {
+  button {
+    display: block;
+  }
+
+  div {
+    display: none;
+    width: 100%;
+    text-align: center;
+    background: $mobile-bg;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    padding: 10px 0;
+    transition: all 0.3s ease-in-out;
+
+    &.open {
+      display: block;
+    }
+
+    ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}

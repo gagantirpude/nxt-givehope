@@ -3,13 +3,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  justify-content: center;
 }
 
 body {
   font-family: $font-primary;
   color: $text-color;
-  background-color: $quaternary-color;
-  //   background: $white no-repeat center center/cover;
+  background-color: $light-text;
   min-height: 100vh;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 300;
+  text-decoration: dotted;
   text-align: center;
 }

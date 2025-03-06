@@ -1,28 +1,37 @@
 import Link from "next/link";
-import Head from "next/head";
 import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
 
-export default function Header({ title = "GIVEHOPE" }) {
+export default function Header() {
   const router = useRouter();
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // Close menu when the route changes
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [router.pathname]);
 
   return (
-    <>
-      <Head>
-        <title>{title} | GIVEHOPE</title>
-        <meta
-          name="description"
-          content="Charity website for donations and support."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-      <header>
-        <nav>
-          <div className="logo">GIVEHOPE</div>
+    <nav>
+      <div className="container">
+        {/* Brand Logo */}
+        <Link href="/">GiveHope</Link>
+
+        {/* Mobile Toggle Button */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle navigation"
+        >
+          ☰
+        </button>
+
+        {/* Navigation Links */}
+        <div className={menuOpen ? "open" : ""}>
           <ul>
             <li className={router.pathname === "/" ? "active" : ""}>
               <Link href="/">Home</Link>
             </li>
-            <li className={router.pathname === "/how-it-works" ? "active" : ""}>
+            <li className={router.pathname === "/howitworks" ? "active" : ""}>
               <Link href="/howitworks">How It Works</Link>
             </li>
             <li className={router.pathname === "/donate" ? "active" : ""}>
@@ -41,8 +50,8 @@ export default function Header({ title = "GIVEHOPE" }) {
               <Link href="/contact">Contact</Link>
             </li>
           </ul>
-        </nav>
-      </header>
-    </>
+        </div>
+      </div>
+    </nav>
   );
 }

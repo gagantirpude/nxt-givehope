@@ -1,11 +1,16 @@
-// import React from "react";
+import Meta from "./Components/Meta";
 
-const Blog = () => {
+export default function Blog() {
   return (
-    <div>
-      <h1>Blog</h1>
-    </div>
+    <>
+      <Meta
+        title="blog"
+        description="Get in touch with GIVEHOPE for more information."
+      />
+      <main>
+        <h1>blog</h1>
+        <p>Feel free to reach out to us for any inquiries.</p>
+      </main>
+    </>
   );
-};
-
-export default Blog;
+}

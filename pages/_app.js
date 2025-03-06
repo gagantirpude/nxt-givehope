@@ -1,5 +1,15 @@
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
 import "../styles/main.scss";
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+function MyApp({ Component, pageProps }) {
+  return (
+    <>
+      <Header title={pageProps.title || "GIVEHOPE"} />
+      <Component {...pageProps} />
+      <Footer />
+    </>
+  );
 }
+
+export default MyApp;

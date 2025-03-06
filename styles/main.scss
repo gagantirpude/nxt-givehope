@@ -1,15 +1,14 @@
-// Import SCSS dependencies
 @import "variables";
-@import "mixins.scss";
+@import "mixins"; // ✅ Make sure this is above any file using mixins
 @import "reset";
 @import "global";
-@import "header.scss";
+@import "header";
 @import "hero";
 @import "whoWeAre";
-@import "infosection";
-@import "donations";
+// @import "infosection.scss";
+// @import "donations";
 @import "successStory";
-@import "latestNews";
-@import "volunteerForm";
+// @import "latestNews";
+// @import "volunteerForm";
 @import "footer";
 @import "fundraisers";

@@ -17,3 +17,8 @@
     border-radius: 5px;
   }
 }
+
+.hero {
+  @include flex-center; // ✅ Correct: Using @include
+  color: white;
+}

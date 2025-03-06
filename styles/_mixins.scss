@@ -1,0 +1,27 @@
+// ✅ Fix: Ensure mixins are defined properly
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// ✅ Fix: Ensure mixins do not contain other mixin declarations
+@mixin button($bg, $color: white) {
+  background-color: $bg;
+  color: $color;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+// ✅ Fix: Background Image Mixin
+@mixin background-image($image) {
+  background: $image no-repeat center;
+  background-size: cover;
+}

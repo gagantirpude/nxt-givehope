@@ -19,7 +19,6 @@ export default function Home() {
   const [latestNews, setLatestNews] = useState([]);
   const counterRef = useRef(0);
 
-  // Fetch Dynamic Data from API
   useEffect(() => {
     const fetchData = async () => {
       try {

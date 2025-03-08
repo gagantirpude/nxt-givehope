@@ -1,6 +1,151 @@
+// Footer Section
 .footer {
-  background: #2d2d2d;
-  color: white;
-  padding: $spacing-lg 0;
-  font-size: 1rem;
+  background: #222;
+  color: #bbb;
+  padding: 60px 20px;
+  text-align: left;
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    .footer-section {
+      flex: 1;
+      min-width: 280px;
+
+      h3 {
+        font-size: 20px;
+        color: #fff;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 10px;
+      }
+
+      .link-underline {
+        color: #ffcc00;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #e6b800;
+        }
+      }
+    }
+
+    // Recent Blogs Section
+    .recent-blogs {
+      .blog-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        justify-content: left;
+
+        img {
+          width: 80px;
+          height: 80px;
+          border-radius: 5px;
+          margin-right: 10px;
+        }
+
+        .blog-info {
+          h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+
+            a {
+              color: #ffcc00;
+              text-decoration: none;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+
+          span {
+            font-size: 14px;
+            color: #bbb;
+          }
+        }
+      }
+    }
+
+    // Contact Section
+    .contact {
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          font-size: 16px;
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+          justify-content: left;
+
+          .icon-map,
+          .icon-phone,
+          .icon-envelope {
+            margin-right: 10px;
+          }
+
+          a {
+            color: #ffcc00;
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: #e6b800;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Footer Bottom Section
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #bbb;
+
+    a {
+      color: #ffcc00;
+      text-decoration: none;
+      font-weight: bold;
+
+      &:hover {
+        color: #e6b800;
+      }
+    }
+  }
+}
+
+// Responsive Styles
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .recent-blogs .blog-item {
+    justify-content: center;
+  }
 }

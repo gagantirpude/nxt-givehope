@@ -1,15 +1,7 @@
 @import "variables";
-@import "mixins"; // ✅ Make sure this is above any file using mixins
+@import "mixins";
 @import "reset";
 @import "header";
-@import "home.scss";
-
-@import "hero";
-@import "whoWeAre";
-// @import "infosection.scss";
-// @import "donations";
-@import "successStory";
-// @import "latestNews";
-// @import "volunteerForm";
+@import "home";
+@import "blog";
 @import "footer";
-@import "fundraisers";

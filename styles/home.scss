@@ -624,7 +624,7 @@ $mobile-bg: #333;
     text-align: center;
 
     .stats-box {
-      // margin-bottom: 20px;
+      margin-bottom: 20px;
     }
   }
 
@@ -643,6 +643,227 @@ $mobile-bg: #333;
   }
 }
 
+// Latest News Section
+.latest-news {
+  background: #ffffff;
+  padding: 60px 20px;
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 40px;
+
+    h2 {
+      font-size: 32px;
+      color: #222;
+      margin-bottom: 10px;
+    }
+  }
+
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .news-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .img-wrap {
+      display: block;
+      width: 100%;
+      height: 250px;
+      overflow: hidden;
+      border-radius: 10px;
+
+      .news-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    h3 {
+      font-size: 20px;
+      margin-top: 15px;
+
+      a {
+        color: #222;
+        text-decoration: none;
+
+        &:hover {
+          color: #ffcc00;
+        }
+      }
+    }
+
+    .date {
+      font-size: 14px;
+      color: gray;
+      display: block;
+      margin: 10px 0;
+    }
+
+    p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .link-underline {
+      color: #ffcc00;
+      text-decoration: none;
+      font-weight: bold;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom 0.3s ease;
+
+      &:hover {
+        border-bottom: 2px solid #ffcc00;
+      }
+    }
+  }
+
+  .error-message {
+    text-align: center;
+    font-size: 18px;
+    color: #999;
+  }
+}
+
+// Be A Volunteer Section
+.volunteer-section {
+  background: url("/images/479552.jpg") no-repeat center center/cover;
+  position: relative;
+  padding: 80px 20px;
+  color: white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); // Dark overlay for better readability
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .volunteer-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+
+    .volunteer-image {
+      flex: 1;
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+
+    .volunteer-form {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 10px;
+
+      h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+
+        .form-control {
+          width: 100%;
+          padding: 10px;
+          border: none;
+          border-radius: 5px;
+          font-size: 16px;
+          color: #333;
+        }
+
+        textarea.form-control {
+          resize: none;
+        }
+      }
+
+      .btn-submit {
+        width: 100%;
+        background: #ffcc00;
+        color: #222;
+        padding: 12px;
+        border-radius: 5px;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+        border: none;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background: #e6b800;
+        }
+      }
+    }
+  }
+}
+
+// Responsive Styles
+@media (max-width: 768px) {
+  .volunteer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .volunteer-form {
+    width: 100%;
+  }
+}
+
+// View More Button
+.view-more {
+  text-align: center;
+  margin-top: 20px;
+
+  .btn-view-more {
+    background: #ffcc00;
+    color: #222;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: #e6b800;
+    }
+  }
+}
+
+// Responsive Styles
 @media (max-width: 768px) {
   .navToggle {
     display: block;
@@ -667,5 +888,8 @@ $mobile-bg: #333;
       flex-direction: column;
       gap: 10px;
     }
+  }
+  .news-grid {
+    grid-template-columns: 1fr;
   }
 }

@@ -142,5 +142,64 @@ export default function handler(req, res) {
       backgroundImage: "/images/479552.jpg",
       storyLink: "#",
     },
+
+    latestNews: [
+      {
+        title: "New Water Wells Built in Africa",
+        date: "March 10, 2024",
+        description:
+          "We have successfully built 50 water wells in rural Africa, providing clean drinking water to thousands.",
+        image: "/images/479552.jpg",
+        link: "/news/water-wells-africa",
+      },
+      {
+        title: "Food Distribution in South America",
+        date: "March 8, 2024",
+        description:
+          "Our food distribution program reached over 5,000 families in need across South America.",
+        image: "/images/479552.jpg",
+        link: "/news/food-distribution",
+      },
+      {
+        title: "Educational Support for Children",
+        date: "March 5, 2024",
+        description:
+          "GIVEHOPE provided school supplies and scholarships to 10,000 children in need.",
+        image: "/images/479552.jpg",
+        link: "/news/education-support",
+      },
+      {
+        title: "Educational Support for Children",
+        date: "March 5, 2024",
+        description:
+          "GIVEHOPE provided school supplies and scholarships to 10,000 children in need.",
+        image: "/images/479552.jpg",
+        link: "/news/education-support",
+      },
+      {
+        title: "Educational Support for Children",
+        date: "March 5, 2024",
+        description:
+          "GIVEHOPE provided school supplies and scholarships to 10,000 children in need.",
+        image: "/images/479552.jpg",
+        link: "/news/education-support",
+      },
+      {
+        title: "Educational Support for Children",
+        date: "March 5, 2024",
+        description:
+          "GIVEHOPE provided school supplies and scholarships to 10,000 children in need.",
+        image: "/images/479552.jpg",
+        link: "/news/education-support",
+      },
+      {
+        title: "Educational Support for Children",
+        date: "March 5, 2024",
+        description:
+          "GIVEHOPE provided school supplies and scholarships to 10,000 children in need.",
+        image: "/images/479552.jpg",
+        link: "/news/education-support",
+      },
+    ],
   });
 }

@@ -7,7 +7,6 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "../styles/home.scss";
 
 export default function Home() {
   const [count, setCount] = useState(0);
@@ -218,57 +217,6 @@ export default function Home() {
         )}
       </section>
 
-      {/* Latest Donations Section (Now Horizontal)
-      <section className="fund-raisers">
-        <div className="container">
-          <div className="section-header">
-            <h2>Latest Donations</h2>
-            <p>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <p>
-              <Link href="#" className="link-underline">
-                View All Donations
-              </Link>
-            </p>
-          </div>
-
-          {donations.length > 0 ? (
-            <div className="donation-list">
-              {donations.map((donation, index) => (
-                <div className="donation-card" key={index}>
-                  <Image
-                    src={donation.image}
-                    alt={`Donor ${donation.name}`}
-                    width={100}
-                    height={100}
-                    className="donor-img"
-                  />
-                  <div className="donate-info">
-                    <h2>{donation.name}</h2>
-                    <span className="time">Donated {donation.timeAgo}</span>
-                    <p>
-                      Donated{" "}
-                      <span className="text-success">${donation.amount}</span>{" "}
-                      <br />
-                      <em>for</em>{" "}
-                      <Link href="#" className="link-underline fundraise-item">
-                        {donation.cause}
-                      </Link>
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <p className="error-message">
-              No donations available at the moment.
-            </p>
-          )}
-        </div>
-      </section> */}
-
       {/* Latest Donations Section (Now Horizontal) */}
       <section className="latest-donations">
         <div className="container">
@@ -302,7 +250,8 @@ export default function Home() {
                       Donated {donation.timeAgo}
                     </span>
                     <p>
-                      Donated <span className="amount">{donation.amount}</span>{" "}
+                      Donated <span className="amount">{donation.amount}</span>
+                      {"$"}
                       <br />
                       <em>for</em>{" "}
                       <Link href="#" className="donation-cause">

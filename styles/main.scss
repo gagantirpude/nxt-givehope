@@ -1,7 +1,17 @@
-@import "variables";
+@import "variables.scss";
 @import "mixins";
 @import "reset";
+
+// Components
 @import "header";
+@import "footer";
+
+// Pages
 @import "home";
 @import "blog";
-@import "footer";
+
+// Responsive Design
+@import "responsive";
+@import "1024px.scss";
+@import "768px.scss";
+@import "480px.scss";

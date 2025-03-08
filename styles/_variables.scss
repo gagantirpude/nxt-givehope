@@ -1,5 +1,4 @@
 // Defines color themes, typography, and layout variables for easy modification.
-
 // Color Palette
 $primary-color: red;
 $secondary-color: pink;
@@ -29,3 +28,108 @@ $border-radius: 8px;
 // Typography
 $font-primary: "Poppins", sans-serif;
 $font-secondary: "Arial", sans-serif;
+
+// New
+// Colors
+$primary-color: #222;
+$accent-color: #ffcc00;
+$text-color: white;
+$overlay-bg: rgba(0, 0, 0, 0.5);
+$mobile-bg: #333;
+$background-light: #f8f9fa;
+$background-dark: #f9f9f9;
+$card-bg: white;
+$border-color: #f2f2f2;
+$box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+// Spacing
+$padding-large: 80px 20px;
+$padding-medium: 60px 20px;
+$padding-small: 40px 20px;
+$border-radius: 10px;
+
+// Font Sizes
+$font-size-large: 32px;
+$font-size-medium: 18px;
+$font-size-small: 16px;
+$font-size-xsmall: 14px;
+
+// // Transition
+$transition-effect: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+// Colors
+$primary-color: #222;
+$secondary-color: #ffcc00;
+$text-color: white;
+$muted-text: #7d8186;
+$background-light: #f8f9fa;
+$background-dark: #f9f9f9;
+$border-color: #f2f2f2;
+$card-bg: white;
+$box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+$success-color: #28a745;
+$error-color: #999;
+$overlay-bg: rgba(0, 0, 0, 0.5);
+
+// Typography
+$font-primary: "Poppins", sans-serif;
+$font-secondary: "Arial", sans-serif;
+
+// Spacing & Border Radius
+$padding-large: 80px 20px;
+$padding-medium: 60px 20px;
+$padding-small: 40px 20px;
+$border-radius: 10px;
+
+// Font Sizes
+$font-size-large: 32px;
+$font-size-medium: 18px;
+$font-size-small: 16px;
+$font-size-xsmall: 14px;
+
+// Transition Effects
+$transition-effect: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+// ================================
+// Global SCSS Variables
+// ================================
+
+// 🎨 Color Palette
+$primary-color: #222;
+$secondary-color: #ffcc00;
+$text-color: white;
+$muted-text: #7d8186;
+$light-text: white;
+$success-color: #28a745;
+$error-color: #999;
+
+// 🌆 Backgrounds & Borders
+$overlay-bg: rgba(0, 0, 0, 0.5);
+$background-light: #f8f9fa;
+$background-dark: #f9f9f9;
+$border-color: #f2f2f2;
+$card-bg: white;
+$box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+$bg-image: url("https://via.placeholder.com/1920x1080"); // Replace with actual image URL
+
+// 🔠 Typography
+$font-primary: "Poppins", sans-serif;
+$font-secondary: "Arial", sans-serif;
+
+// 📏 Spacing & Border Radius
+$spacing-sm: 10px;
+$spacing-md: 20px;
+$spacing-lg: 40px;
+$padding-large: 80px 20px;
+$padding-medium: 60px 20px;
+$padding-small: 40px 20px;
+$border-radius: 10px;
+
+// 🔤 Font Sizes
+$font-size-large: 32px;
+$font-size-medium: 18px;
+$font-size-small: 16px;
+$font-size-xsmall: 14px;
+
+// 🎬 Transitions
+$transition-effect: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;

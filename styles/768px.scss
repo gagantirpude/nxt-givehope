@@ -1,0 +1,247 @@
+@media (max-width: 768px) {
+  .hero-section {
+    height: 75vh;
+    padding: 0 15px;
+  }
+
+  .hero-content {
+    h2 {
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    .play-video {
+      font-size: 16px;
+
+      .play-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .who-we-are {
+    padding: 60px 20px;
+  }
+
+  .who-we-are-content {
+    flex-direction: column;
+    align-items: center;
+
+    .stats-box {
+      width: 100%;
+    }
+
+    .text-box {
+      text-align: center;
+    }
+  }
+
+  .our-goal {
+    padding: 60px 15px;
+  }
+
+  .goal-content {
+    flex-direction: column;
+    align-items: center;
+
+    .goal-item {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+
+  //
+  .latest-fundraisers {
+    padding: 40px 10px;
+  }
+
+  .fundraiser-header {
+    h2 {
+      font-size: 26px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+  }
+
+  .swiper {
+    max-width: 100%;
+  }
+
+  .fundraiser-card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .fundraiser-body {
+    h3 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    .donation-time {
+      font-size: 12px;
+    }
+
+    .fund-raised {
+      font-size: 12px;
+    }
+  }
+
+  //
+  .latest-fundraisers {
+    padding: 40px 10px;
+  }
+
+  .fundraiser-header {
+    h2 {
+      font-size: 26px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+  }
+
+  .swiper {
+    max-width: 100%;
+  }
+
+  .fundraiser-card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .fundraiser-body {
+    h3 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: $font-size-xsmall;
+    }
+
+    .donation-time {
+      font-size: 12px;
+    }
+
+    .fund-raised {
+      font-size: 12px;
+    }
+  }
+
+  //
+  .latest-donations {
+    padding: $padding-small;
+  }
+
+  .donations-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .donation-item {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    padding: $spacing-sm;
+  }
+
+  .donor-photo {
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+
+
+  //
+   .featured-section {
+    padding: $padding-small;
+  }
+
+  .success-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .image-wrapper {
+    max-width: 100%;
+  }
+
+  .text-content {
+    max-width: 100%;
+    text-align: center;
+    
+    h2 {
+      font-size: 26px;
+    }
+
+    p {
+      font-size: $font-size-small;
+    }
+  }
+
+  //
+  .latest-news {
+    padding: 40px 10px;
+  }
+
+  .section-header {
+    h2 {
+      font-size: 26px;
+    }
+  }
+
+  .news-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .news-card {
+    padding: $spacing-sm;
+    text-align: center;
+
+    .img-wrap {
+      height: 200px;
+    }
+  }
+
+
+  //
+  .volunteer-section {
+    padding: $padding-small;
+  }
+
+  .volunteer-content {
+    gap: 20px;
+  }
+
+  .volunteer-image,
+  .volunteer-form {
+    max-width: 100%;
+  }
+
+  .volunteer-form {
+    padding: $spacing-md;
+  }
+
+  //
+  .view-more {
+    margin-top: 15px;
+  }
+
+  .btn-view-more {
+    padding: 10px 20px;
+    font-size: $font-size-small;
+  }
+}

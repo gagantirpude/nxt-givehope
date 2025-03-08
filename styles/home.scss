@@ -1,13 +1,7 @@
-// Variables
-$primary-color: #222;
-$accent-color: #ffcc00;
-$text-color: white;
-$overlay-bg: rgba(0, 0, 0, 0.5);
-$mobile-bg: #333;
-
 // Hero Section
 .hero-section {
   position: relative;
+  top: -85px;
   width: 100%;
   height: 100vh;
   background: url("../public/images/479552.jpg") no-repeat center center/cover;
@@ -16,8 +10,7 @@ $mobile-bg: #333;
   justify-content: center;
   text-align: center;
   color: $text-color;
-  position: relative;
-  top: -85px;
+  padding: 0 20px;
 
   &::before {
     content: "";
@@ -32,11 +25,18 @@ $mobile-bg: #333;
   .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 600px;
+    max-width: 800px;
     padding: 20px;
 
     h2 {
-      font-size: 36px;
+      font-size: 48px;
+      margin-bottom: 20px;
+      line-height: 1.2;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 18px;
       margin-bottom: 20px;
     }
 
@@ -46,10 +46,12 @@ $mobile-bg: #333;
       .play-video {
         display: flex;
         align-items: center;
+        justify-content: center;
         color: white;
         text-decoration: none;
-        font-size: 18px;
+        font-size: 20px;
         transition: color 0.3s ease;
+        font-weight: bold;
 
         &:hover {
           color: $accent-color;
@@ -59,12 +61,17 @@ $mobile-bg: #333;
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 50px;
-          height: 50px;
+          width: 60px;
+          height: 60px;
           background: rgba(255, 255, 255, 0.3);
           border-radius: 50%;
-          margin-right: 10px;
-          font-size: 24px;
+          margin-right: 12px;
+          font-size: 28px;
+          transition: background 0.3s ease;
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.5);
+          }
         }
       }
     }
@@ -159,45 +166,88 @@ $mobile-bg: #333;
   padding: 80px 20px;
   display: flex;
   justify-content: center;
+  border-top: 1px solid #f2f2f2;
   position: relative;
   top: -85px;
-  border-top: 1px solid #f2f2f2 !important;
+
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 36px;
+    color: #222;
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: $accent-color;
+      margin: 10px auto 0;
+    }
+  }
 
   .goal-content {
     display: flex;
-    max-width: 1200px;
-    width: 100%;
-    gap: 40px;
+    flex-wrap: wrap;
+    gap: 30px;
     justify-content: space-between;
+    width: 1140px;
 
     .goal-item {
-      flex: 1;
+      flex: 1 1 calc(33.333% - 20px);
       background: white;
       padding: 30px;
       text-align: center;
-      border-radius: 10px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease-in-out;
+      border-radius: 12px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 300px;
 
       &:hover {
-        transform: translateY(-5px);
+        transform: translateY(-8px);
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
       }
 
       .icon {
-        font-size: 40px;
-        margin-bottom: 10px;
+        font-size: 45px;
+        color: $primary-color;
+        background: rgba(0, 0, 0, 0.05);
+        padding: 15px;
+        border-radius: 50%;
+        margin-bottom: 15px;
+        transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+        &:hover {
+          background: $accent-color;
+          color: white;
+          transform: rotate(10deg);
+        }
       }
 
       h3 {
         font-size: 22px;
         color: $primary-color;
-        margin-bottom: 10px;
+        font-weight: bold;
+        margin-bottom: 12px;
       }
 
       p {
         font-size: 16px;
         color: #555;
         margin-bottom: 15px;
+        line-height: 1.6;
       }
 
       .link-underline {
@@ -217,12 +267,12 @@ $mobile-bg: #333;
 
 // Latest Fundraisers Section
 .latest-fundraisers {
-  background: #f8f9fa;
-  padding: 60px 20px;
+  background: $background-light;
+  padding: $padding-medium;
   text-align: center;
+  border-top: 1px solid $border-color;
   position: relative;
   top: -85px;
-  border-top: 1px solid #f2f2f2 !important;
 
   .fundraiser-header {
     max-width: 800px;
@@ -230,40 +280,42 @@ $mobile-bg: #333;
     margin-bottom: 40px;
 
     h2 {
-      font-size: 32px;
-      color: #222;
+      font-size: $font-size-large;
+      color: $primary-color;
       margin-bottom: 10px;
     }
 
     p {
-      font-size: 18px;
+      font-size: $font-size-medium;
       color: #555;
     }
 
     .link-underline {
-      color: #ffcc00;
+      color: $accent-color;
       text-decoration: none;
       font-weight: bold;
       border-bottom: 2px solid transparent;
       transition: border-bottom 0.3s ease;
 
       &:hover {
-        border-bottom: 2px solid #ffcc00;
+        border-bottom: 2px solid $accent-color;
       }
     }
   }
 
   .swiper {
     padding-bottom: 40px;
-    width: 1140px;
+    width: 100%;
+    max-width: 1140px;
+    margin: auto;
   }
 
   .fundraiser-card {
-    background: white;
+    background: $card-bg;
     width: 300px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    transition: $transition-effect;
     margin: 10px;
 
     &:hover {
@@ -273,8 +325,8 @@ $mobile-bg: #333;
     .fundraiser-img {
       width: 100%;
       height: auto;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
     }
 
     .fundraiser-body {
@@ -286,23 +338,23 @@ $mobile-bg: #333;
         margin-bottom: 10px;
 
         a {
-          color: #222;
+          color: $primary-color;
           text-decoration: none;
 
           &:hover {
-            color: #ffcc00;
+            color: $accent-color;
           }
         }
       }
 
       p {
-        font-size: 16px;
+        font-size: $font-size-small;
         color: #555;
         margin-bottom: 10px;
       }
 
       .donation-time {
-        font-size: 14px;
+        font-size: $font-size-xsmall;
         color: gray;
         display: block;
         margin-bottom: 10px;
@@ -318,12 +370,12 @@ $mobile-bg: #333;
 
         .progress-fill {
           height: 100%;
-          background: #ffcc00;
+          background: $accent-color;
         }
       }
 
       .fund-raised {
-        font-size: 14px;
+        font-size: $font-size-xsmall;
         font-weight: bold;
         color: #333;
       }
@@ -331,9 +383,10 @@ $mobile-bg: #333;
   }
 }
 
+// Latest Donations Section
 .fund-raisers {
-  padding: 60px 0;
-  background: #f9f9f9;
+  padding: $padding-medium;
+  background: $background-dark;
 
   .fundraiser-header {
     text-align: center;
@@ -341,11 +394,11 @@ $mobile-bg: #333;
   }
 
   .person-donate {
-    background: #fff;
+    background: $card-bg;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    transition: $transition-effect;
 
     &:hover {
       transform: translateY(-5px);
@@ -368,11 +421,11 @@ $mobile-bg: #333;
 
       .time {
         color: #777;
-        font-size: 14px;
+        font-size: $font-size-xsmall;
       }
 
       p {
-        font-size: 14px;
+        font-size: $font-size-xsmall;
         line-height: 1.5;
 
         .text-success {
@@ -390,14 +443,14 @@ $mobile-bg: #333;
   }
 }
 
-// Donation
 // Latest Donations Section (Horizontal Layout)
 .latest-donations {
-  background: #f9f9f9;
-  padding: 100px 20px;
+  background: $background-dark;
+  padding: $padding-large;
+  position: relative;
+  border-top: 1px solid $border-color;
   position: relative;
   top: -85px;
-  border-top: 1px solid #f2f2f2 !important;
 
   .container {
     max-width: 1200px;
@@ -409,25 +462,26 @@ $mobile-bg: #333;
     margin-bottom: 40px;
 
     h2 {
-      font-size: 32px;
-      color: #222;
+      font-size: $font-size-large;
+      color: $primary-color;
       margin-bottom: 10px;
+      font-weight: bold;
     }
 
     p {
-      font-size: 18px;
-      color: #555;
+      font-size: $font-size-medium;
+      color: $muted-text;
       margin-bottom: 10px;
     }
 
     .view-all {
-      color: #ffcc00;
+      color: $secondary-color;
       text-decoration: none;
       font-weight: bold;
       transition: border-bottom 0.3s ease;
 
       &:hover {
-        border-bottom: 2px solid #ffcc00;
+        border-bottom: 2px solid $secondary-color;
       }
     }
   }
@@ -440,49 +494,56 @@ $mobile-bg: #333;
   }
 
   .donation-item {
-    display: flex;
+    // display: flex;
     align-items: center;
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    // width: calc(50% - 10px);
-    width: calc(24% - 10px);
-    display: block;
+    background: $card-bg;
+    padding: $spacing-md;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    transition: $transition-effect;
+    width: calc(25% - 15px);
+    // text-align: left;
 
     &:hover {
       transform: translateY(-5px);
     }
 
     .donor-photo {
-      width: 80px;
-      height: 80px;
+      width: 70px;
+      height: 70px;
       border-radius: 50%;
       margin-right: 15px;
+      object-fit: cover;
     }
 
     .donation-info {
+      flex: 1;
+
       h3 {
-        font-size: 18px;
-        color: #222;
+        font-size: $font-size-small;
+        color: $primary-color;
         margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      p {
+        color: $muted-text;
       }
 
       .donation-time {
-        font-size: 14px;
-        color: gray;
+        font-size: $font-size-xsmall;
+        color: $muted-text;
         display: block;
         margin-bottom: 5px;
       }
 
       .amount {
-        color: #28a745;
+        color: $success-color;
         font-weight: bold;
       }
 
       .donation-cause {
-        color: #ffcc00;
+        color: $secondary-color;
         text-decoration: none;
         font-weight: bold;
 
@@ -495,19 +556,19 @@ $mobile-bg: #333;
 
   .error-message {
     text-align: center;
-    font-size: 18px;
-    color: #999;
+    font-size: $font-size-medium;
+    color: $error-color;
   }
 }
 
-// setSuccessStory
+// Success Story Section
 .featured-section {
   position: relative;
   top: -85px;
   background-size: cover;
   background-position: center;
-  padding: 80px 20px;
-  color: white;
+  padding: $padding-large;
+  color: $light-text;
   display: flex;
   justify-content: center;
 
@@ -517,7 +578,7 @@ $mobile-bg: #333;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: $overlay-bg;
   }
 
   .container {
@@ -532,121 +593,72 @@ $mobile-bg: #333;
     display: flex;
     gap: 40px;
     align-items: center;
+    flex-wrap: wrap;
 
     .image-wrapper {
       flex: 1;
+      max-width: 50%;
 
       img {
         width: 100%;
-        border-radius: 10px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        border-radius: $border-radius;
+        box-shadow: $box-shadow;
       }
     }
 
     .text-content {
       flex: 1;
-      color: white;
+      max-width: 50%;
+      color: $light-text;
       text-align: left;
 
       .featured-text {
-        font-size: 18px;
+        font-size: $font-size-medium;
         font-weight: bold;
-        color: #ffcc00;
+        color: $secondary-color;
       }
 
       h2 {
-        font-size: 32px;
+        font-size: $font-size-large;
         margin-bottom: 15px;
+        font-weight: bold;
       }
 
       p {
-        font-size: 18px;
+        font-size: $font-size-medium;
         margin-bottom: 15px;
       }
 
       .fund-raised {
         font-size: 20px;
         font-weight: bold;
-        color: #ffcc00;
+        color: $secondary-color;
         display: block;
         margin-bottom: 20px;
       }
 
       .btn {
         display: inline-block;
-        background: #28a745;
-        color: white;
+        background: $success-color;
+        color: $light-text;
         padding: 12px 24px;
         text-decoration: none;
         font-weight: bold;
-        border-radius: 5px;
+        border-radius: $border-radius;
         transition: background 0.3s ease;
 
         &:hover {
-          background: darken(#28a745, 10%);
+          background: darken($success-color, 10%);
         }
       }
     }
   }
 }
 
-// Responsive Design
-@media (max-width: 768px) {
-  .success-content {
-    flex-direction: column;
-    text-align: center;
-
-    .text-content {
-      text-align: center;
-    }
-  }
-}
-
-// Responsive Styles
-@media (max-width: 768px) {
-  .donations-row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .donation-item {
-    width: 100%;
-    max-width: 350px;
-  }
-}
-
-// Media Query
-
-// Responsive Styles
-@media (max-width: 768px) {
-  .who-we-are-content {
-    flex-direction: column;
-    text-align: center;
-
-    .stats-box {
-      margin-bottom: 20px;
-    }
-  }
-
-  .goal-content {
-    flex-direction: column;
-    text-align: center;
-
-    .goal-item {
-      margin-bottom: 20px;
-    }
-  }
-
-  .fundraiser-card {
-    width: 100%;
-    max-width: 350px;
-  }
-}
-
 // Latest News Section
 .latest-news {
-  background: #ffffff;
-  padding: 60px 20px;
+  background: $card-bg;
+  padding: $padding-medium;
 
   .container {
     max-width: 1200px;
@@ -658,9 +670,10 @@ $mobile-bg: #333;
     margin-bottom: 40px;
 
     h2 {
-      font-size: 32px;
-      color: #222;
+      font-size: $font-size-large;
+      color: $primary-color;
       margin-bottom: 10px;
+      font-weight: bold;
     }
   }
 
@@ -672,12 +685,12 @@ $mobile-bg: #333;
   }
 
   .news-card {
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background: $card-bg;
+    padding: $spacing-md;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
     text-align: center;
-    transition: transform 0.3s ease-in-out;
+    transition: $transition-effect;
 
     &:hover {
       transform: translateY(-5px);
@@ -688,59 +701,66 @@ $mobile-bg: #333;
       width: 100%;
       height: 250px;
       overflow: hidden;
-      border-radius: 10px;
+      border-radius: $border-radius;
 
       .news-img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+          transform: scale(1.05);
+        }
       }
     }
 
     h3 {
-      font-size: 20px;
+      font-size: $font-size-small;
       margin-top: 15px;
+      font-weight: bold;
 
       a {
-        color: #222;
+        color: $primary-color;
         text-decoration: none;
+        transition: color 0.3s ease-in-out;
 
         &:hover {
-          color: #ffcc00;
+          color: $secondary-color;
         }
       }
     }
 
     .date {
-      font-size: 14px;
-      color: gray;
+      font-size: $font-size-xsmall;
+      color: $muted-text;
       display: block;
       margin: 10px 0;
     }
 
     p {
-      font-size: 16px;
-      color: #555;
+      font-size: $font-size-small;
+      color: $muted-text;
       margin-bottom: 10px;
     }
 
     .link-underline {
-      color: #ffcc00;
+      color: $secondary-color;
       text-decoration: none;
       font-weight: bold;
       border-bottom: 2px solid transparent;
       transition: border-bottom 0.3s ease;
 
       &:hover {
-        border-bottom: 2px solid #ffcc00;
+        border-bottom: 2px solid $secondary-color;
       }
     }
   }
 
   .error-message {
     text-align: center;
-    font-size: 18px;
-    color: #999;
+    font-size: $font-size-medium;
+    color: $error-color;
   }
 }
 
@@ -748,8 +768,8 @@ $mobile-bg: #333;
 .volunteer-section {
   background: url("/images/479552.jpg") no-repeat center center/cover;
   position: relative;
-  padding: 80px 20px;
-  color: white;
+  padding: $padding-large;
+  color: $light-text;
 
   &::before {
     content: "";
@@ -758,7 +778,7 @@ $mobile-bg: #333;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); // Dark overlay for better readability
+    background: $overlay-bg; // Dark overlay for better readability
   }
 
   .container {
@@ -772,26 +792,32 @@ $mobile-bg: #333;
     gap: 40px;
     max-width: 1200px;
     margin: auto;
+    flex-wrap: wrap;
 
     .volunteer-image {
       flex: 1;
+      max-width: 50%;
 
       img {
         width: 100%;
-        border-radius: 10px;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow;
       }
     }
 
     .volunteer-form {
       flex: 1;
+      max-width: 50%;
       background: rgba(255, 255, 255, 0.1);
-      padding: 30px;
-      border-radius: 10px;
+      padding: $spacing-md;
+      border-radius: $border-radius;
+      backdrop-filter: blur(5px);
 
       h2 {
-        font-size: 28px;
+        font-size: $font-size-large;
         margin-bottom: 15px;
         text-align: center;
+        font-weight: bold;
       }
 
       .form-group {
@@ -799,97 +825,75 @@ $mobile-bg: #333;
 
         .form-control {
           width: 100%;
-          padding: 10px;
+          padding: 12px;
           border: none;
-          border-radius: 5px;
-          font-size: 16px;
-          color: #333;
+          border-radius: $border-radius;
+          font-size: $font-size-small;
+          color: $primary-color;
+          background: rgba(255, 255, 255, 0.8);
+          transition: background 0.3s ease-in-out;
+
+          &:focus {
+            background: white;
+            outline: none;
+          }
         }
 
         textarea.form-control {
           resize: none;
+          // height: 120px;
+          height: 80px;
         }
       }
 
       .btn-submit {
         width: 100%;
-        background: #ffcc00;
-        color: #222;
+        background: $secondary-color;
+        color: $primary-color;
         padding: 12px;
-        border-radius: 5px;
+        border-radius: $border-radius;
         font-weight: bold;
         text-transform: uppercase;
         cursor: pointer;
         border: none;
-        transition: background 0.3s ease;
+        transition: background 0.3s ease, transform 0.2s ease-in-out;
 
         &:hover {
-          background: #e6b800;
+          background: darken($secondary-color, 10%);
+          transform: translateY(-3px);
+        }
+
+        &:active {
+          transform: scale(0.98);
         }
       }
     }
   }
 }
 
-// Responsive Styles
-@media (max-width: 768px) {
-  .volunteer-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .volunteer-form {
-    width: 100%;
-  }
-}
-
-// View More Button
+// View More Button Section
 .view-more {
   text-align: center;
   margin-top: 20px;
 
   .btn-view-more {
-    background: #ffcc00;
-    color: #222;
+    display: inline-block;
+    background: $secondary-color;
+    color: $primary-color;
     padding: 12px 24px;
-    border-radius: 5px;
+    border-radius: $border-radius;
     font-weight: bold;
     text-decoration: none;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    text-transform: uppercase;
 
     &:hover {
-      background: #e6b800;
-    }
-  }
-}
-
-// Responsive Styles
-@media (max-width: 768px) {
-  .navToggle {
-    display: block;
-  }
-
-  .navLinks {
-    display: none;
-    width: 100%;
-    text-align: center;
-    background: $mobile-bg;
-    position: absolute;
-    left: 0;
-    top: 60px;
-    padding: 10px 0;
-    transition: all 0.3s ease-in-out;
-
-    &.open {
-      display: block;
+      background: darken($secondary-color, 10%);
+      transform: translateY(-3px);
     }
 
-    ul {
-      flex-direction: column;
-      gap: 10px;
+    &:active {
+      transform: scale(0.98);
     }
-  }
-  .news-grid {
-    grid-template-columns: 1fr;
   }
 }

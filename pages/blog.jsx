@@ -17,7 +17,7 @@ export default function Blog() {
         const data = await res.json();
 
         setAllNews(data.latestNews);
-        setFilteredNews(data.latestNews); // Default: Show all news
+        setFilteredNews(data.latestNews);
       } catch (error) {
         console.error("Error fetching news data:", error);
       }
